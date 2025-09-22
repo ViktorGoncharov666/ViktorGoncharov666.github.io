@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+header,footer,section{
+    background-color:lightpink;
+}
+header{
+    margin-bottom:50px;
+    height:110px;
+    padding:10px;
+}
+
+section {
+    width: 1100px;
+    margin:30px auto;
+    padding:50px;
+}
+
+footer{
+    margin-top:50px;
+    padding:10px;
+    font-weight:bold;
+    font-style:Times New Roman;
+    font-size: 16px;
+}
+
+#logo {
+    float:left;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+
+nav {
+    float: right;
+    text-align: center;
+    max-width: 960px;
+    border: 1px solid black;
+    padding: 5px;
+    
+}
+
+header h1 {
+    position:relative;
+    bottom:-40px;
+    right:-100px;
+    text-align:center;
+    font-size: 40px
+}
+section h1 {
+    position:center;
+    text-align:center;
+    font-size: 30px
+}
+section h2 {
+    position:center;
+    text-align:center;
+    font-size: 20px
+    padding: 10px;
+}
+
+a,a:visited {
+    color: black; 
+    text-decoration: none;
+}
+ul{
+    margin:10px auto;
+    position:relative;
+    left:50px;
+}
+th{
+    background:yellow;
+}
+th,td{
+    padding:2px 10px;
+    text-align:center;
+    border:1px solid black;
+}
+table{
+    border:2px solid black;
+    border-collapse:collapse;
+    margin:10px auto;
+}
+table tr{background:lime;}
+table tr:nth-of-type(2){background:lightblue;}
+table tr:nth-of-type(3){background:lime;}
+table tr:nth-of-type(4){background:lightblue;}
+table tr:nth-of-type(5){background:lime;}
+table tr:nth-of-type(6){background:lightblue;}
+table tr:nth-of-type(7){background:lime;}
+form{
+    margin: 10px 50px;
+}
+#bio{
+    width:500px;
+    height:200px;
+}
+#name,#tell,#email,#date,#bio{
+    padding: 2px;
+}
