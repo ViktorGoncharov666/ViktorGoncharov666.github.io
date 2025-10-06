@@ -3,23 +3,61 @@
     padding:0;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#table {
+    order: 1;
+}
+
+#links {
+    order: 2; 
+}
+
+#form {
+    order: 3; 
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    float: none;
+    margin-top: 10px;
+}
+
+nav a {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    display: block;
+}
+
 header,footer,section{
     background-color:lightpink;
 }
+
+header, footer, section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 header{
-    margin-bottom:50px;
-    height:110px;
+    margin-bottom:20px;
+    height:auto;
     padding:10px;
 }
 
 section {
-    width: 1100px;
-    margin:30px auto;
-    padding:50px;
+    width: 100%;
+    margin:20px 0;
+    padding:20px;
 }
 
 footer{
-    margin-top:50px;
+    margin-top:20px;
     padding:10px;
     font-weight:bold;
     font-style:Times New Roman;
@@ -27,26 +65,21 @@ footer{
 }
 
 #logo {
-    float:left;
-    width:100px;
-    height:100px;
+    float:none;
+    display:block;
+    margin:0 auto;
+    width:80px;
+    height:80px;
     border-radius:50%;
 }
 
-nav {
-    float: right;
-    text-align: center;
-    border: 1px solid black;
-    padding: 5px;
+header h1 {
+    position:static;
+    text-align:center;
+    font-size: 24px;
+    margin-top:10px;
 }
 
-header h1 {
-    position:relative;
-    bottom:-40px;
-    right:-100px;
-    text-align:center;
-    font-size: 40px;
-}
 section h1,h3 {
     position:center;
     text-align:center;
@@ -89,8 +122,11 @@ table{
     border:2px solid black;
     border-collapse:collapse;
     margin:10px auto;
-    width:700px;
-    height:400px;
+    width:100%;
+    max-width:100%;
+    overflow-x:auto;
+    display:block;
+    height:auto;
 }
 table tr{background:lime;}
 table tr:nth-of-type(2){background:lightblue;}
@@ -107,4 +143,60 @@ form{
 }
 #name,#tell,#email,#date,#bio{
     padding: 2px;
+}
+
+
+@media (min-width: 768px) {
+    .main-container {
+        display: block; 
+    }
+    
+    #table, #links, #form {
+        order: 0;
+    }
+
+    nav {
+        display: block;
+        float: right;
+        width: auto;
+    }
+    
+    nav a {
+        display: inline;
+        padding: 5px;
+        border-bottom: none;
+        margin-left: 15px;
+    }
+    
+
+    #logo {
+        float:left;
+        width:100px;
+        height:100px;
+    }
+    
+    header h1 {
+        position:relative;
+        bottom:-40px;
+        right:-100px;
+        text-align:center;
+        font-size: 40px;
+    }
+    
+    header{
+        margin-bottom:50px;
+        height:110px;
+    }
+    
+    section {
+        width: 1100px;
+        margin:30px auto;
+        padding:50px;
+    }
+    
+    table{
+        width:700px;
+        display:table;
+        height:400px;
+    }
 }
